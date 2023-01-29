@@ -1,6 +1,5 @@
-import React from 'react';
 import { Meta, Story } from '@storybook/react';
-import { AbButton, Props } from '../src';
+import { AbButton } from '../src';
 
 const meta: Meta = {
   title: 'Button',
@@ -19,6 +18,6 @@ const meta: Meta = {
 
 export default meta;
 
-const Template: Story<Props> = args => <AbButton />;
+const Template: Story = () => <AbButton>Clique aqui!</AbButton>;
 
-export const Primary = Template.bind({})
+export const Primary = Template.bind({});
