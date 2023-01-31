@@ -1,14 +1,14 @@
+import React from 'react';
 import { AbCard } from '../src';
+import { Story } from '@storybook/react';
 
 export default {
   title: 'Card',
   component: AbCard,
 };
 
-export const CardComponent = () => {
-  return (
-    <AbCard>
-      <h1>Olá, eu sou um card</h1>
-    </AbCard>
-  );
+const Template: Story<typeof AbCard> = (props) => <AbCard {...props} />;
+export const Default = Template.bind({});
+Default.args = {
+  children: 'Card Content',
 };
