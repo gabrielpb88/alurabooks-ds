@@ -39,7 +39,7 @@ const Input = styled.input`
   }
 `;
 
-const AbTextField = ({
+export const AbTextField = ({
   label,
   inputType,
   placeholder,
