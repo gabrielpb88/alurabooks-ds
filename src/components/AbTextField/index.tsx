@@ -5,8 +5,8 @@ export interface AbTextFieldProps {
   label?: string;
   inputType?: 'text' | 'password' | 'email' | 'date';
   placeholder?: string;
-  value?: string;
-  onChange?: React.ChangeEventHandler<HTMLInputElement>;
+  value: string;
+  onChange: (value: string) => void;
 }
 
 const TextFieldWrapper = styled.div`
@@ -52,7 +52,7 @@ export const AbTextField = ({
       <Input
         type={inputType}
         placeholder={placeholder}
-        onChange={onChange}
+        onChange={(e) => onChange(e.target.value)}
         value={value}
       />
     </TextFieldWrapper>
