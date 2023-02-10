@@ -22,7 +22,7 @@ export const AbModal = ({ open, onClose, title, children }: ModalProps) => {
   }
   return (
     <>
-      <BackgroundModal onClick={onClose}/>
+      <BackgroundModal onClick={onClose} />
       <StyledModal>
         <TitleWrapper>
           {title && <Title>{title}</Title>}
@@ -47,8 +47,8 @@ export const AbModal = ({ open, onClose, title, children }: ModalProps) => {
                   y2="1.99959"
                   gradientUnits="userSpaceOnUse"
                 >
-                  <stop stop-color="#002F52" />
-                  <stop offset="1" stop-color="#326589" />
+                  <stop stopColor="#002F52" />
+                  <stop offset="1" stopColor="#326589" />
                 </linearGradient>
               </defs>
             </svg>
