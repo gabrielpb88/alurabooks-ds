@@ -22,7 +22,7 @@ export const AbModal = ({ open, onClose, title, children }: ModalProps) => {
   }
   return (
     <>
-      <BackgroundModal />
+      <BackgroundModal onClick={onClose}/>
       <StyledModal>
         <TitleWrapper>
           {title && <Title>{title}</Title>}
