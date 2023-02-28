@@ -30,7 +30,7 @@ export interface AbAmountInputProps {
   value: number;
 }
 
-const AbAmountInput = ({ onChange, value }: AbAmountInputProps) => {
+export const AbAmountInput = ({ onChange, value }: AbAmountInputProps) => {
   return (
     <Wrapper>
       <button onClick={() => onChange(value - 1)}>-</button>
