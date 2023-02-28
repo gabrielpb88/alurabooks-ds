@@ -36,7 +36,7 @@ const Article = styled.article<{ selected: boolean }>`
   }
 `;
 
-export interface AbOptionsGroup {
+export interface IAbOptionsGroup {
   id: number;
   title: string;
   body: string;
@@ -44,9 +44,9 @@ export interface AbOptionsGroup {
 }
 
 export interface OptionsGroupProps {
-  options: AbOptionsGroup[];
-  defaultValue?: AbOptionsGroup;
-  onChange?: (option: AbOptionsGroup) => void;
+  options: IAbOptionsGroup[];
+  defaultValue?: IAbOptionsGroup;
+  onChange?: (option: IAbOptionsGroup) => void;
 }
 
 export const AbOptionsGroup = ({
@@ -54,10 +54,10 @@ export const AbOptionsGroup = ({
   defaultValue,
   onChange,
 }: OptionsGroupProps) => {
-  const [selected, setSelected] = useState<AbOptionsGroup | null>(
+  const [selected, setSelected] = useState<IAbOptionsGroup | null>(
     defaultValue || null
   );
-  const handleOnChange = (option: AbOptionsGroup) => {
+  const handleOnChange = (option: IAbOptionsGroup) => {
     setSelected(option);
     if (onChange) {
       onChange(option);
