@@ -69,6 +69,7 @@ export const AbOptionsGroup = ({
         <Article
           onClick={() => handleOnChange(option)}
           selected={option.id === selected?.id}
+          key={option.id}
         >
           <header>{option.title}</header>
           <div>
